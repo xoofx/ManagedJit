@@ -1,0 +1,55 @@
+LIBRARY	"NetAsmDemoClib"
+EXPORTS
+	IsCpuidSupported
+	Cpuid
+	CalculateStructure
+	CastByteToFloat
+	NetAsmAddInC
+	NetAsmAddDll1
+	NetAsmAddDll2
+	SimpleAddInterop_stdcall
+	SimpleAddInterop_static_stdcall
+	matrix_mul_sse2_clrcall
+	matrix_mul_std_clrcall
+	matrix_mul_std_stdcall
+	matrix_mul_sse2_stdcall
+	
+	Test0ArgClrCall
+	Test1ArgClrCall
+	Test2ArgClrCall
+	Test3ArgClrCall
+	Test4ArgClrCall
+	Test4ArgWith1DoubleClrCall
+	Test4ArgWith2DoubleClrCall
+	Test4ArgWithRefAndOutClrCall
+	TestArgSizeClrCall
+	
+	Test0ArgStdCall
+	Test1ArgStdCall
+	Test2ArgStdCall
+	Test3ArgStdCall
+	Test4ArgStdCall
+	Test4ArgWith1DoubleStdCall
+	Test4ArgWith2DoubleStdCall
+	Test4ArgWithRefAndOutStdCall
+	TestArgSizeStdCall
+
+	Test0ArgFastCall
+	Test1ArgFastCall
+	Test2ArgFastCall
+	Test3ArgFastCall
+	Test4ArgFastCall
+	Test4ArgWith1DoubleFastCall
+	Test4ArgWith2DoubleFastCall
+	Test4ArgWithRefAndOutFastCall
+	TestArgSizeFastCall
+	
+	Test0ArgCdecl
+	Test1ArgCdecl
+	Test2ArgCdecl
+	Test3ArgCdecl
+	Test4ArgCdecl
+	Test4ArgWith1DoubleCdecl
+	Test4ArgWith2DoubleCdecl
+	Test4ArgWithRefAndOutCdecl
+	TestArgSizeCdecl

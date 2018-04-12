@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="1) Install the Hook at the beginning of your application with : JITHook.Install()">
+    <Position X="0.5" Y="0.521" Height="0.854" Width="2.69" />
+  </Comment>
+  <Comment CommentText="2) Set AllowCodeInjection Attribute at the class level to enable code injection for a class Set NoCodeInjection Attribute on method that you want to exclude from any code injection (class level or application level)">
+    <Position X="0.5" Y="3" Height="1.469" Width="2.69" />
+  </Comment>
+  <Comment CommentText="3) Set CodeInjection Attribute at the class or method level to specify the injection method (static, dynamic, dll link)">
+    <Position X="0.5" Y="4.802" Height="0.646" Width="2.731" />
+  </Comment>
+  <Comment CommentText="4) If dynamic code injection method is choosed, use ICodeInjector callback interface in order to generate the native code of a method at runtime.">
+    <Position X="0.5" Y="6.75" Height="0.854" Width="2.731" />
+  </Comment>
+  <Comment CommentText="5) The MethodContext is passed to the CompileMethod of ICodeInjector. It represents the method being jitted. Use SetOutputNativeCode to set the native code to use for the method being compiled.">
+    <Position X="0.521" Y="8.229" Height="1.052" Width="2.731" />
+  </Comment>
+  <Class Name="NetAsm.NoCodeInjectionAttribute" Collapsed="true">
+    <Position X="6" Y="3" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="NetAsm.MethodContext">
+    <Position X="3.5" Y="8.25" Width="5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Class Name="NetAsm.AllowCodeInjectionAttribute" Collapsed="true">
+    <Position X="3.5" Y="3" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="NetAsm.JITHook">
+    <Position X="3.5" Y="0.5" Width="5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="NetAsm.CodeInjectionAttribute">
+    <Position X="3.5" Y="4" Width="5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="NetAsm.ICodeInjector">
+    <Position X="3.5" Y="6.75" Width="5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
