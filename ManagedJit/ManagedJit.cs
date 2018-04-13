@@ -212,20 +212,20 @@ namespace HackCoreCLR
             out int nativeSizeOfCode // ULONG* nativeSizeOfCode    /* OUT */
         )
         {
-            // Early exit gracefully. We are entering this if when calling the trampoline
-            // As our JIT is not yet compile, but we still want this method to be compiled by the 
-            // original JIT!
-            if (!_isHookInstalled)
-            {
-                nativeEntry = IntPtr.Zero;
-                nativeSizeOfCode = 0;
-                return 0;
-            }
-
             var compileEntry = _compileTls ?? (_compileTls = new CompileTls());
             compileEntry.EnterCount++;
             try
             {
+                // Early exit gracefully. We are entering this if when calling the trampoline
+                // As our JIT is not yet compile, but we still want this method to be compiled by the 
+                // original JIT!
+                if (!_isHookInstalled)
+                {
+                    nativeEntry = IntPtr.Zero;
+                    nativeSizeOfCode = 0;
+                    return 0;
+                }
+
                 // We always let the default JIT compile the method
                 var result = DefaultCompileMethod(thisPtr, comp, ref info, flags, out nativeEntry, out nativeSizeOfCode);
 
